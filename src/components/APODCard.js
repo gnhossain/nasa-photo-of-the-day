@@ -1,9 +1,11 @@
 import React from "react";
 
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  Card, CardImg, CardText, CardBody, CardFooter,
+  CardTitle, CardSubtitle
 } from 'reactstrap';
+
+
 
 const APODCard = (props) => {
 
@@ -17,15 +19,20 @@ const APODCard = (props) => {
     // </div>
 
     <div className='APOD-card'>
-      <Card>
-        <CardImg top width="100%" src={props.apod.hdurl} alt="Nasa APOD" />
-        <CardBody>
-          <CardTitle>Title: {props.apod.title}</CardTitle>
-          <CardSubtitle>Date: {props.apod.date}</CardSubtitle>
-          <CardText>Explanation: {props.apod.explanation}</CardText>
-          {/* <Button>Button</Button> */}
-        </CardBody>
-      </Card>
+       <Card>
+        
+       <CardTitle>Title: {props.apod.title}</CardTitle>
+       <CardSubtitle>Date: {props.apod.date}</CardSubtitle>
+       <CardBody>
+       <CardImg width="100%" src={props.apod.hdurl} alt= "Nasa APOD" />
+       </CardBody>
+       <CardText>Explanation: {props.apod.explanation}</CardText>
+       <CardFooter>Copyright:{props.apod.copyright}</CardFooter>
+          {/* <CardLink href="#">Another Link</CardLink>
+        */}
+        </Card>
+
+      
     </div>
 
   );

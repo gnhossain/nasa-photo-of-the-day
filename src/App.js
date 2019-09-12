@@ -10,6 +10,7 @@ const Title = styled.h1`
   color: DeepSkyBlue;
 
   padding: .5em;
+  margin:20px
   background: Lavender;
 `;
 
